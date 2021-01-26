@@ -1,0 +1,11 @@
+// Functions
+@function rem($pixels, $context: 18) {
+    @return ($pixels / $context) * 1rem;
+}
+
+// Mixins
+@mixin sub-headline {
+    font-size: rem(15);
+    line-height: 1.8;
+    color: $Grayish-Blue;
+}

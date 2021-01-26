@@ -1,0 +1,281 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*::before,
+*::after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 1.125rem;
+}
+
+body {
+  font-family: 'Bai Jamjuree', sans-serif;
+  color: #4c545d;
+  background-image: url(../images/bg-header-desktop.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  text-align: center;
+}
+
+.container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: [margin-start] minmax(1.11111rem, 10vw) [center-start] ([col-start] minmax(min-content, 1fr) [col-end])[8] [center-end] minmax(1.11111rem, 10vw) [margin-end];
+      grid-template-columns: [margin-start] minmax(1.11111rem, 10vw) [center-start] repeat(8, [col-start] minmax(-webkit-min-content, 1fr) [col-end]) [center-end] minmax(1.11111rem, 10vw) [margin-end];
+      grid-template-columns: [margin-start] minmax(1.11111rem, 10vw) [center-start] repeat(8, [col-start] minmax(min-content, 1fr) [col-end]) [center-end] minmax(1.11111rem, 10vw) [margin-end];
+  justify-items: center;
+}
+
+button {
+  outline: none;
+  border: 0;
+  border-radius: 2.77778rem;
+  padding: 0.77778rem 1.94444rem;
+  color: white;
+}
+
+.iosDownload-btn {
+  background-color: #26baa4;
+  border-bottom: 0.25rem solid #218778;
+  margin-right: 0.27778rem;
+}
+
+.macDownload-btn {
+  background-color: #6173ff;
+  border-bottom: 0.25rem solid #4650aa;
+}
+
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  grid-column: col-start 3 / col-end 6;
+  max-width: 31.66667rem;
+  margin-bottom: 10vh;
+}
+
+.header__logo {
+  width: 5.55556rem;
+  height: 5.55556rem;
+}
+
+.header__tp-headline > h1 {
+  margin-top: 2.5rem;
+  margin-bottom: 0.83333rem;
+}
+
+.header__tp-headline > p {
+  font-size: 0.83333rem;
+  line-height: 1.8;
+  color: #9fabb2;
+  font-size: 0.92222rem;
+  margin-bottom: 2.22222rem;
+}
+
+.header__bt-headline > h2 {
+  margin-top: 5.55556rem;
+  margin-bottom: 0.83333rem;
+}
+
+.header__bt-headline > p {
+  font-size: 0.83333rem;
+  line-height: 1.8;
+  color: #9fabb2;
+}
+
+.feature1-content {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-column-align: start;
+      justify-self: start;
+  -ms-grid-columns: min-content minmax(min-content, 21.11111rem);
+      grid-template-columns: -webkit-min-content minmax(-webkit-min-content, 21.11111rem);
+      grid-template-columns: min-content minmax(min-content, 21.11111rem);
+  grid-column-gap: 5vw;
+  grid-column: margin-start/ center-end;
+  text-align: left;
+}
+
+.feature1-content__feature--1 {
+  -ms-flex-item-align: end;
+      -ms-grid-row-align: end;
+      align-self: end;
+}
+
+.feature1-content__feature--2 {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.feature1-content__feature--3 {
+  margin-bottom: 1.94444rem;
+}
+
+.feature1-content > * {
+  line-height: 2.1;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2 / 3;
+}
+
+.feature1-content > * > p {
+  font-size: 0.83333rem;
+  line-height: 1.8;
+  color: #9fabb2;
+}
+
+.feature1-content__img {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1 / 2;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 3;
+  grid-row: 1 / span 3;
+  width: 51vw;
+  -webkit-transform: translateX(-4%);
+          transform: translateX(-4%);
+}
+
+.feature2-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+  grid-column: center-start / center-end;
+  margin-top: 13vh;
+  margin-bottom: 8vh;
+}
+
+.feature2-content__headline {
+  max-width: 36.11111rem;
+  margin-bottom: 8vh;
+  line-height: 2.1;
+}
+
+.feature2-content__headline > p {
+  font-size: 0.83333rem;
+  line-height: 1.8;
+  color: #9fabb2;
+}
+
+.feature2-content__img {
+  width: 100%;
+}
+
+.feature3-content {
+  display: -ms-grid;
+  display: grid;
+  justify-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-grid-columns: (minmax(min-content, 8.33333rem))[6];
+      grid-template-columns: repeat(6, minmax(-webkit-min-content, 8.33333rem));
+      grid-template-columns: repeat(6, minmax(min-content, 8.33333rem));
+  grid-gap: 5vh;
+  grid-column: center-start / center-end;
+  /* Blacklist, Text snippets, Sneak preview boxes, :not() working but it overides
+    img selector*/
+}
+
+.feature3-content__headline {
+  grid-column: 1 / -1;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1 / 2;
+  line-height: 2.1;
+}
+
+.feature3-content__headline > p {
+  font-size: 0.83333rem;
+  line-height: 1.8;
+  color: #9fabb2;
+}
+
+.feature3-content__item--1, .feature3-content__item--2, .feature3-content__item--3 {
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  grid-row: 2 / 3;
+  line-height: 2.2;
+  margin-bottom: 10vh;
+}
+
+.feature3-content__item--1 > p, .feature3-content__item--2 > p, .feature3-content__item--3 > p {
+  font-size: 0.83333rem;
+  line-height: 1.8;
+  color: #9fabb2;
+}
+
+.feature3-content__item--1 {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-column: 1 / 3;
+}
+
+.feature3-content__item--2 {
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 2;
+  grid-column: 3 / 5;
+}
+
+.feature3-content__item--3 {
+  -ms-grid-column: 5;
+  -ms-grid-column-span: 2;
+  grid-column: 5 / 7;
+}
+
+.feature3-content > img {
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 1;
+  grid-row: 3 / 4;
+}
+
+.feature3-content__ibm-logo {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2 / 3;
+}
+
+.feature3-content__microsoft-logo {
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 2;
+  grid-column: 3 / 5;
+}
+
+.feature3-content__hp-logo {
+  -ms-grid-column: 5;
+  -ms-grid-column-span: 1;
+  grid-column: 5 / 6;
+}
+
+.feature3-content__vector-logo {
+  -ms-grid-column: 6;
+  -ms-grid-column-span: 1;
+  grid-column: 6 / 7;
+}
+/*# sourceMappingURL=main.css.map */

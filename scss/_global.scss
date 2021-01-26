@@ -1,0 +1,56 @@
+* { 
+   margin: 0;
+   padding: 0;
+}
+
+*::before,
+*::after {
+   box-sizing: inherit;
+}
+
+html {
+   box-sizing: border-box;
+   font-size: 1.125rem; // 18px
+}
+
+body {
+    font-family: 'Bai Jamjuree', sans-serif;
+    color: $Dark-Grayish-Blue;
+    background-image: url(../images/bg-header-desktop.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+}
+
+// Wrapper
+.container {
+   display: grid;
+   grid-template-columns: [margin-start] minmax(rem(20), 10vw)
+                          [center-start] repeat(8, [col-start] minmax(min-content, 1fr) [col-end]) [center-end] 
+                          minmax(rem(20), 10vw) [margin-end];
+   justify-items: center;
+}
+
+// Buttons
+button {
+   outline: none;
+   border: 0;
+   border-radius: rem(50);
+   padding: rem(14) rem(35);
+   color: white;
+}
+
+.iosDownload-btn {
+   background-color: $Strong-Cyan;
+   border-bottom: rem(4.5) solid $Dark-Strong-Cyan;
+   margin-right: rem(5); // 5px
+}
+
+.macDownload-btn {
+   background-color: $Light-Blue;
+   border-bottom: rem(4.5) solid $Dark-Blue;
+}
+
+
+
