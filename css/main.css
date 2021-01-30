@@ -40,6 +40,20 @@ button {
   border-radius: 2.77778rem;
   padding: 0.77778rem 1.94444rem;
   color: white;
+  -webkit-transition: all .2s;
+  transition: all .2s;
+}
+
+button:hover {
+  -webkit-transform: translateY(-10%);
+          transform: translateY(-10%);
+  -webkit-box-shadow: 0 0.27778rem 0.83333rem rgba(0, 0, 0, 0.315);
+          box-shadow: 0 0.27778rem 0.83333rem rgba(0, 0, 0, 0.315);
+}
+
+button:active {
+  -webkit-transform: translateY(1%);
+          transform: translateY(1%);
 }
 
 .iosDownload-btn {
@@ -48,9 +62,30 @@ button {
   margin-right: 0.27778rem;
 }
 
+.iosDownload-btn:hover {
+  border-bottom: 0.55556rem solid #218778;
+}
+
+.iosDownload-btn:active {
+  border-bottom: 0.27778rem solid #218778;
+}
+
 .macDownload-btn {
   background-color: #6173ff;
   border-bottom: 0.25rem solid #4650aa;
+}
+
+.macDownload-btn:hover {
+  border-bottom: 0.55556rem solid #4650aa;
+}
+
+.macDownload-btn:active {
+  border-bottom: 0.27778rem solid #4650aa;
+}
+
+a {
+  text-decoration: none;
+  color: #4c545d;
 }
 
 .header {
@@ -64,7 +99,7 @@ button {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  grid-column: col-start 3 / col-end 6;
+  grid-column: center-start / center-end;
   max-width: 31.66667rem;
   margin-bottom: 10vh;
 }
@@ -81,7 +116,7 @@ button {
 
 .header__tp-headline > p {
   font-size: 0.83333rem;
-  line-height: 1.8;
+  line-height: 1.7;
   color: #9fabb2;
   font-size: 0.92222rem;
   margin-bottom: 2.22222rem;
@@ -94,7 +129,7 @@ button {
 
 .header__bt-headline > p {
   font-size: 0.83333rem;
-  line-height: 1.8;
+  line-height: 1.7;
   color: #9fabb2;
 }
 
@@ -127,16 +162,16 @@ button {
   margin-bottom: 1.94444rem;
 }
 
-.feature1-content > * {
+.feature1-content > *:not(img) {
   line-height: 2.1;
   -ms-grid-column: 2;
   -ms-grid-column-span: 1;
   grid-column: 2 / 3;
 }
 
-.feature1-content > * > p {
+.feature1-content > *:not(img) > p {
   font-size: 0.83333rem;
-  line-height: 1.8;
+  line-height: 1.7;
   color: #9fabb2;
 }
 
@@ -156,9 +191,7 @@ button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-items: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -179,7 +212,7 @@ button {
 
 .feature2-content__headline > p {
   font-size: 0.83333rem;
-  line-height: 1.8;
+  line-height: 1.7;
   color: #9fabb2;
 }
 
@@ -205,29 +238,25 @@ button {
 
 .feature3-content__headline {
   grid-column: 1 / -1;
-  -ms-grid-row: 1;
-  -ms-grid-row-span: 1;
-  grid-row: 1 / 2;
   line-height: 2.1;
 }
 
 .feature3-content__headline > p {
   font-size: 0.83333rem;
-  line-height: 1.8;
+  line-height: 1.7;
   color: #9fabb2;
 }
 
-.feature3-content__item--1, .feature3-content__item--2, .feature3-content__item--3 {
-  -ms-grid-row: 2;
-  -ms-grid-row-span: 1;
-  grid-row: 2 / 3;
+.feature3-content > *:not(:first-child),
+.feature3-content > *:not(img) {
   line-height: 2.2;
   margin-bottom: 10vh;
 }
 
-.feature3-content__item--1 > p, .feature3-content__item--2 > p, .feature3-content__item--3 > p {
+.feature3-content > *:not(:first-child) > p,
+.feature3-content > *:not(img) > p {
   font-size: 0.83333rem;
-  line-height: 1.8;
+  line-height: 1.7;
   color: #9fabb2;
 }
 
@@ -247,12 +276,6 @@ button {
   -ms-grid-column: 5;
   -ms-grid-column-span: 2;
   grid-column: 5 / 7;
-}
-
-.feature3-content > img {
-  -ms-grid-row: 3;
-  -ms-grid-row-span: 1;
-  grid-row: 3 / 4;
 }
 
 .feature3-content__ibm-logo {
@@ -277,5 +300,146 @@ button {
   -ms-grid-column: 6;
   -ms-grid-column-span: 1;
   grid-column: 6 / 7;
+}
+
+.feature4-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+  grid-column: center-start / center-end;
+  max-width: 38.88889rem;
+  margin: 13vh 0;
+}
+
+.feature4-content__headline {
+  line-height: 2.2;
+}
+
+.feature4-content__headline > p {
+  font-size: 0.83333rem;
+  line-height: 1.7;
+  color: #9fabb2;
+}
+
+.feature4-content__btns {
+  margin-top: 5vh;
+}
+
+.info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  width: 100%;
+  height: 155%;
+  grid-column: margin-start / margin-end;
+  line-height: 2;
+  text-align: left;
+  background-color: #ebebeb;
+}
+
+.info__logo {
+  width: 3.05556rem;
+}
+
+.info__icons > :nth-child(2) {
+  margin: 0 1vw;
+}
+
+.info > :nth-child(3) {
+  margin: 0 5vw;
+}
+
+.attribution {
+  -ms-grid-column-align: start;
+      justify-self: start;
+  -ms-grid-row: 6;
+  -ms-grid-row-span: 1;
+  grid-row: 6 / 7;
+  grid-column: center-start / center-end;
+  margin-bottom: 1vh;
+  text-align: center;
+  font-size: 0.61111rem;
+}
+
+.attribution > a {
+  color: #3e52a3;
+}
+
+@media screen and (max-width: 63.5em) {
+  html {
+    font-size: 0.9375rem;
+  }
+  .header {
+    margin-bottom: 5vh;
+  }
+  .feature1-content {
+    justify-items: center;
+    grid-column: center-start / center-end;
+    grid-row-gap: 1.66667rem;
+  }
+  .feature1-content__img {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+    width: 80vw;
+    margin-bottom: 5vh;
+    grid-column: 1 / -1;
+  }
+  .feature1-content > *:not(img) {
+    max-width: 16.66667rem;
+    grid-column: 1 / -1;
+    text-align: center;
+  }
+  .feature2-content__headline {
+    max-width: 19.44444rem;
+    line-height: 1.66667rem;
+    margin-bottom: 5vh;
+  }
+  .feature2-content__headline > h2 {
+    margin-bottom: 0.83333rem;
+  }
+  .feature3-content__headline {
+    max-width: 13.88889rem;
+  }
+  .feature3-content__headline > h2 {
+    line-height: 1.66667rem;
+    margin-bottom: 0.83333rem;
+  }
+  .feature3-content > *:not(:first-child),
+  .feature3-content > *:not(img) {
+    grid-column: 1 / -1;
+    margin-bottom: 0vh;
+  }
+  .feature3-content > :nth-child(4) {
+    margin-bottom: 10vh;
+  }
+  .feature3-content > img {
+    grid-column: 1 / -1;
+  }
+  .info {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column wrap;
+            flex-flow: column wrap;
+  }
+  .macDownload-btn {
+    margin-top: 0.55556rem;
+  }
+  button {
+    width: 80%;
+  }
 }
 /*# sourceMappingURL=main.css.map */

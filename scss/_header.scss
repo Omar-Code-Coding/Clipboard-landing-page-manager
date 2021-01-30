@@ -2,7 +2,7 @@
     display: flex;
     flex-flow: column wrap;
     align-items: center;
-    grid-column: col-start 3 / col-end 6;
+    grid-column: center-start / center-end;
     max-width: rem(570);
     margin-bottom: 10vh;
 

@@ -1,3 +1,5 @@
+@import 'variables';
+
 * { 
    margin: 0;
    padding: 0;
@@ -39,17 +41,51 @@ button {
    border-radius: rem(50);
    padding: rem(14) rem(35);
    color: white;
+   transition: all .2s;
+
+   // On hover
+   &:hover {
+      transform: translateY(-10%);
+      box-shadow: 0 rem(5) rem(15) rgba(0, 0, 0, 0.315);
+   }
+
+   // On click
+   &:active {
+      transform: translateY(1%);
+   }
 }
 
 .iosDownload-btn {
    background-color: $Strong-Cyan;
    border-bottom: rem(4.5) solid $Dark-Strong-Cyan;
    margin-right: rem(5); // 5px
+
+   &:hover {
+      border-bottom: rem(10) solid $Dark-Strong-Cyan;
+   }
+
+   &:active {
+      border-bottom: rem(5) solid $Dark-Strong-Cyan;
+   }
 }
 
 .macDownload-btn {
    background-color: $Light-Blue;
    border-bottom: rem(4.5) solid $Dark-Blue;
+
+   &:hover {
+      border-bottom: rem(10) solid $Dark-Blue;
+   }
+
+   &:active {
+      border-bottom: rem(5) solid $Dark-Blue;
+   }
+}
+
+//links
+a {
+   text-decoration: none;
+   color: $Dark-Grayish-Blue;
 }
 
 

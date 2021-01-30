@@ -1,0 +1,81 @@
+@media screen and (max-width: 63.5em) {     // 1016px
+    html {
+        font-size: 0.9375rem;  // 15px
+    }
+
+    .header {
+        margin-bottom: 5vh;
+    }
+
+    .feature1-content{
+        justify-items: center;
+        grid-column: center-start / center-end;
+        grid-row-gap: rem(30);
+        
+        &__img {
+            transform: translateX(0%);
+            width: 80vw;
+            margin-bottom: 5vh;
+            grid-column: 1 / -1;
+        }
+
+        // Side headlines
+        > *:not(img) {
+              max-width: rem(300);
+              grid-column: 1 / -1;
+              text-align: center;
+        }
+    }
+
+    .feature2-content {
+        &__headline {
+            max-width: rem(350);
+            line-height: rem(30);
+            margin-bottom: 5vh;
+
+            > h2 {
+                margin-bottom: rem(15);
+            }
+        }
+    }
+
+    .feature3-content {
+        &__headline {
+            max-width: rem(250);
+
+            > h2 {
+                line-height: rem(30);
+                margin-bottom: rem(15);
+            }
+        }
+
+        // Selects Blacklist, Plain text, Sneak preview Except The Headline & Logos
+        > *:not(:first-child),
+         > *:not(img){
+            grid-column: 1 / -1;
+            margin-bottom: 0vh;
+        }
+
+        // Sneak preview
+        > :nth-child(4) {
+            margin-bottom: 10vh;
+        }
+
+        // Logos
+        > img {
+            grid-column: 1 / -1;
+        }
+    }
+
+    .info {
+        flex-flow: column wrap;
+    }
+
+    .macDownload-btn {
+        margin-top: rem(10);
+    }
+
+    button {
+        width: 80%;
+    }
+}
